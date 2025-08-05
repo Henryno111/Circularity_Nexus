@@ -44,7 +44,7 @@ export default function Navbar() {
         }`}
       >
         <div className="w-full">
-          <div className="flex items-center justify-between h-16 lg:h-20 px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
+          <div className="w-full flex items-center justify-between h-16 lg:h-20 px-8 sm:px-12 lg:px-16 xl:px-20 2xl:px-24">
             {/* Logo */}
             <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleLinkClick('#home')}>
               <div className="relative">
@@ -64,7 +64,7 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-6 lg:space-x-8 xl:space-x-10 2xl:space-x-12">
+            <div className="hidden lg:flex items-center gap-8 lg:gap-12 xl:gap-16 2xl:gap-20">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -73,7 +73,7 @@ export default function Navbar() {
                     e.preventDefault();
                     handleLinkClick(link.href);
                   }}
-                  className="relative px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium text-base lg:text-lg xl:text-xl transition-all duration-200 group whitespace-nowrap"
+                  className="relative px-6 py-3 text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium text-base lg:text-lg xl:text-xl transition-all duration-200 group whitespace-nowrap"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-emerald-600 group-hover:w-full transition-all duration-300"></span>
@@ -82,12 +82,12 @@ export default function Navbar() {
             </div>
 
             {/* Right Side - Theme Toggle & CTA */}
-            <div className="flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
+            <div className="flex items-center gap-6 lg:gap-8 xl:gap-10">
               {/* Theme Toggle */}
               {mounted && (
                 <button
                   onClick={toggleTheme}
-                  className="relative p-2 lg:p-3 rounded-xl bg-gray-100 dark:bg-emerald-800/50 text-gray-600 dark:text-emerald-300 hover:bg-gray-200 dark:hover:bg-emerald-700 transition-all duration-200 group"
+                  className="relative p-3 lg:p-4 rounded-xl bg-gray-100 dark:bg-emerald-800/50 text-gray-600 dark:text-emerald-300 hover:bg-gray-200 dark:hover:bg-emerald-700 transition-all duration-200 group"
                   aria-label="Toggle theme"
                 >
                   <div className="relative w-5 h-5 lg:w-6 lg:h-6">
@@ -98,14 +98,15 @@ export default function Navbar() {
               )}
 
               {/* CTA Button - Desktop */}
-              <button className="hidden sm:flex items-center px-4 lg:px-6 py-2 lg:py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white text-sm lg:text-base font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105">
+              <button className="hidden sm:flex items-center px-16 lg:px-12
+               py-4 lg:py-5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white text-sm lg:text-base font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105">
                 Get Started
               </button>
 
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 rounded-xl bg-gray-100 dark:bg-emerald-800/50 text-gray-600 dark:text-emerald-300 hover:bg-gray-200 dark:hover:bg-emerald-700 transition-all duration-200"
+                className="lg:hidden p-3 rounded-xl bg-gray-100 dark:bg-emerald-800/50 text-gray-600 dark:text-emerald-300 hover:bg-gray-200 dark:hover:bg-emerald-700 transition-all duration-200"
                 aria-label="Toggle mobile menu"
               >
                 <div className="relative w-6 h-6">
@@ -154,7 +155,7 @@ export default function Navbar() {
 
             {/* Navigation Links */}
             <div className="flex-1 py-6">
-              <div className="space-y-1 px-6">
+              <div className="space-y-3 px-6">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
@@ -163,7 +164,7 @@ export default function Navbar() {
                       e.preventDefault();
                       handleLinkClick(link.href);
                     }}
-                    className="flex items-center justify-between px-4 py-3 text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-800/50 rounded-xl font-medium transition-all duration-200 group"
+                    className="flex items-center justify-between px-6 py-4 text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-800/50 rounded-xl font-medium transition-all duration-200 group"
                   >
                     {link.label}
                     <ChevronDown className="w-4 h-4 rotate-[-90deg] opacity-0 group-hover:opacity-100 transition-all duration-200" />

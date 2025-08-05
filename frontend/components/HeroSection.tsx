@@ -22,8 +22,8 @@ export default function HeroSection() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full">
-        <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 pt-20 lg:pt-24">
+      <div className="relative z-10 w-full flex items-center justify-center">
+        <div className="w-full max-w-8xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 pt-20 lg:pt-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 2xl:gap-32 items-center min-h-[calc(100vh-8rem)]">
             
             {/* Left Content - Text & CTA */}
@@ -72,12 +72,12 @@ export default function HeroSection() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-6 lg:gap-8 pt-6">
-                <button className="group inline-flex items-center justify-center px-10 py-5 lg:px-12 lg:py-6 xl:px-14 xl:py-7 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white text-lg lg:text-xl xl:text-2xl font-semibold rounded-2xl transition-all duration-300 shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105 transform min-w-[200px] lg:min-w-[240px]">
+                <button className="group inline-flex items-center justify-center px-6 py-3 lg:px-8 lg:py-4 xl:px-10 xl:py-5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white text-lg lg:text-xl xl:text-2xl font-semibold rounded-2xl transition-all duration-300 shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105 transform min-w-[200px] lg:min-w-[240px]">
                   <span>Start Tokenizing</span>
                   <ArrowRight className="ml-3 lg:ml-4 w-6 h-6 lg:w-7 lg:h-7 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>
                 
-                <button className="group inline-flex items-center justify-center px-10 py-5 lg:px-12 lg:py-6 xl:px-14 xl:py-7 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white text-lg lg:text-xl xl:text-2xl font-semibold rounded-2xl border border-white/30 hover:border-white/50 transition-all duration-300 min-w-[180px] lg:min-w-[220px]">
+                <button className="group inline-flex items-center justify-center px-6 py-3 lg:px-8 lg:py-4 xl:px-10 xl:py-5 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white text-lg lg:text-xl xl:text-2xl font-semibold rounded-2xl border border-white/30 hover:border-white/50 transition-all duration-300 min-w-[180px] lg:min-w-[220px]">
                   <Play className="mr-3 lg:mr-4 w-6 h-6 lg:w-7 lg:h-7" />
                   <span>Watch Demo</span>
                 </button>

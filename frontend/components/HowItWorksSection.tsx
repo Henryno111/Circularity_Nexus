@@ -44,7 +44,7 @@ const steps = [
 export default function HowItWorksSection() {
   return (
     <section id="how-it-works" className="py-24 bg-gradient-to-br from-emerald-50 via-white to-green-50 dark:from-emerald-900 dark:via-emerald-800 dark:to-emerald-900">
-      <div className="w-full mx-auto max-w-none 2xl:max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+      <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-emerald-100 dark:bg-emerald-800/50 rounded-full text-emerald-800 dark:text-emerald-200 text-sm font-semibold mb-4">
