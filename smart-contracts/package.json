@@ -1,0 +1,53 @@
+{
+  "name": "circularity-nexus-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for Circularity Nexus waste tokenization platform",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network hedera-testnet",
+    "deploy:previewnet": "hardhat run scripts/deploy.js --network hedera-previewnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network hedera-mainnet",
+    "verify": "hardhat run scripts/verify.js",
+    "size": "hardhat size-contracts",
+    "coverage": "hardhat coverage",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "lint:fix": "solhint 'contracts/**/*.sol' --fix",
+    "format": "prettier --write 'contracts/**/*.sol' 'scripts/**/*.js' 'test/**/*.js'"
+  },
+  "keywords": [
+    "blockchain",
+    "hedera",
+    "smart-contracts",
+    "tokenization",
+    "waste-management",
+    "sustainability",
+    "defi",
+    "carbon-credits"
+  ],
+  "author": "Circularity Nexus Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@hashgraph/sdk": "^2.49.2",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.2",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "@nomicfoundation/hardhat-verify": "^2.0.3",
+    "@openzeppelin/contracts": "^5.0.1",
+    "@openzeppelin/contracts-upgradeable": "^5.0.1",
+    "chai": "^4.3.10",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.9.2",
+    "hardhat": "^2.19.4",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "prettier": "^3.1.1",
+    "prettier-plugin-solidity": "^1.2.0",
+    "solhint": "^4.1.1",
+    "solidity-coverage": "^0.8.5"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.8.0"
+  }
+}
