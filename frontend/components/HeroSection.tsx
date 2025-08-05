@@ -1,144 +1,152 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Recycle, Coins, Leaf } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowRight, Play, Sparkles, TrendingUp, Shield, Zap } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background with Image Placeholder */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-emerald-100 dark:from-emerald-900 dark:via-emerald-800 dark:to-emerald-900">
-        {/* Image Placeholder - Replace with your hero image */}
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-green-400/10 dark:from-emerald-600/20 dark:to-green-500/20">
-          <div className="absolute inset-0 flex items-center justify-center text-emerald-300/30 dark:text-emerald-700/30">
-            <div className="text-center">
-              <div className="text-6xl font-bold mb-4">📸</div>
-              <div className="text-xl font-medium">Hero Image Placeholder</div>
-              <div className="text-sm mt-2">Replace with your choice of background image</div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-white/40 dark:bg-emerald-900/60"></div>
+    <section id="home" className="relative min-h-screen flex items-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero_image.png"
+          alt="Circularity Nexus - Transforming waste into wealth"
+          fill
+          className="object-cover object-center"
+          priority
+          quality={95}
+        />
+        {/* Subtle overlay to maintain image clarity while ensuring text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/10 to-black/20 dark:from-black/40 dark:via-black/20 dark:to-black/40"></div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-emerald-100 dark:bg-emerald-800/50 rounded-full text-emerald-800 dark:text-emerald-200 text-sm font-semibold">
-              <Leaf className="w-4 h-4 mr-2" />
-              Tokenize Trash. Earn Wealth. Heal the Planet.
-            </div>
-
-            {/* Main Heading */}
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-emerald-900 dark:text-white leading-tight">
-                Turn Your
-                <span className="text-emerald-500 block">Waste Into</span>
-                <span className="bg-gradient-to-r from-emerald-600 to-green-500 bg-clip-text text-transparent block">
-                  Wealth
+      {/* Content Container */}
+      <div className="relative z-10 w-full">
+        <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 pt-20 lg:pt-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 2xl:gap-32 items-center min-h-[calc(100vh-8rem)]">
+            
+            {/* Left Content - Text & CTA */}
+            <div className="space-y-8 lg:space-y-10 xl:space-y-12">
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-2 bg-white/90 dark:bg-emerald-900/90 backdrop-blur-sm rounded-full border border-emerald-200/50 dark:border-emerald-700/50 shadow-lg">
+                <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400 mr-2" />
+                <span className="text-sm font-semibold text-emerald-800 dark:text-emerald-200">
+                  Tokenize Trash. Earn Wealth. Heal the Planet.
                 </span>
-              </h1>
-              
-              <p className="text-xl lg:text-2xl text-emerald-700 dark:text-emerald-200 leading-relaxed max-w-2xl">
-                Revolutionary blockchain platform that transforms waste into tradeable tokens, 
-                carbon credits, and real rewards. Join the circular economy revolution.
-              </p>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">50+</div>
-                <div className="text-sm text-emerald-700 dark:text-emerald-300">Waste Types</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">25%</div>
-                <div className="text-sm text-emerald-700 dark:text-emerald-300">Max APY</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">95%</div>
-                <div className="text-sm text-emerald-700 dark:text-emerald-300">AI Accuracy</div>
-              </div>
-            </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group inline-flex items-center px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl font-semibold text-lg transition-all duration-200 shadow-xl shadow-emerald-500/25">
-                Start Tokenizing
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </button>
-              
-              <button className="inline-flex items-center px-8 py-4 bg-white/80 dark:bg-emerald-800/80 text-emerald-700 dark:text-emerald-200 rounded-2xl font-semibold text-lg border border-emerald-200 dark:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-700 transition-all duration-200">
-                Watch Demo
-              </button>
-            </div>
-          </div>
+              {/* Main Heading */}
+              <div className="space-y-4">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] text-white drop-shadow-2xl">
+                  <span className="block">Transform Your</span>
+                  <span className="block bg-gradient-to-r from-emerald-400 via-green-300 to-emerald-500 bg-clip-text text-transparent">
+                    Waste Into
+                  </span>
+                  <span className="block">Digital Wealth</span>
+                </h1>
+                
+                <p className="text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl drop-shadow-lg">
+                  Revolutionary blockchain platform powered by AI that transforms everyday waste into tradeable tokens, 
+                  carbon credits, and real financial rewards.
+                </p>
+              </div>
 
-          {/* Right Column - Feature Cards */}
-          <div className="space-y-6">
-            {/* Feature Card 1 */}
-            <div className="bg-white/70 dark:bg-emerald-800/40 backdrop-blur-sm rounded-3xl p-6 border border-emerald-100 dark:border-emerald-700 shadow-lg">
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-emerald-500 rounded-2xl">
-                  <Recycle className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-emerald-900 dark:text-white mb-2">
-                    AI-Powered Verification
-                  </h3>
-                  <p className="text-emerald-700 dark:text-emerald-200">
-                    Groq Llama3 validates waste quality and quantity via mobile scanning with 95%+ accuracy.
-                  </p>
-                </div>
+              {/* Stats Row */}
+              <div className="grid grid-cols-3 gap-6 lg:gap-8 xl:gap-12 py-8 lg:py-10">
+                {[
+                  { number: '50+', label: 'Waste Types' },
+                  { number: '25%', label: 'Max APY' },
+                  { number: '95%', label: 'AI Accuracy' }
+                ].map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white drop-shadow-lg">
+                      {stat.number}
+                    </div>
+                    <div className="text-sm sm:text-base text-white/80 font-medium">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-6 lg:gap-8 pt-6">
+                <button className="group inline-flex items-center justify-center px-10 py-5 lg:px-12 lg:py-6 xl:px-14 xl:py-7 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white text-lg lg:text-xl xl:text-2xl font-semibold rounded-2xl transition-all duration-300 shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105 transform min-w-[200px] lg:min-w-[240px]">
+                  <span>Start Tokenizing</span>
+                  <ArrowRight className="ml-3 lg:ml-4 w-6 h-6 lg:w-7 lg:h-7 group-hover:translate-x-1 transition-transform duration-200" />
+                </button>
+                
+                <button className="group inline-flex items-center justify-center px-10 py-5 lg:px-12 lg:py-6 xl:px-14 xl:py-7 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white text-lg lg:text-xl xl:text-2xl font-semibold rounded-2xl border border-white/30 hover:border-white/50 transition-all duration-300 min-w-[180px] lg:min-w-[220px]">
+                  <Play className="mr-3 lg:mr-4 w-6 h-6 lg:w-7 lg:h-7" />
+                  <span>Watch Demo</span>
+                </button>
               </div>
             </div>
 
-            {/* Feature Card 2 */}
-            <div className="bg-white/70 dark:bg-emerald-800/40 backdrop-blur-sm rounded-3xl p-6 border border-emerald-100 dark:border-emerald-700 shadow-lg">
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-emerald-500 rounded-2xl">
-                  <Coins className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-emerald-900 dark:text-white mb-2">
-                    DeFi Recycling Vaults
-                  </h3>
-                  <p className="text-emerald-700 dark:text-emerald-200">
-                    Stake waste tokens and earn up to 25% APY from corporate ESG partners and carbon markets.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Feature Card 3 */}
-            <div className="bg-white/70 dark:bg-emerald-800/40 backdrop-blur-sm rounded-3xl p-6 border border-emerald-100 dark:border-emerald-700 shadow-lg">
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-emerald-500 rounded-2xl">
-                  <Leaf className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-emerald-900 dark:text-white mb-2">
-                    Carbon Credit Fusion
-                  </h3>
-                  <p className="text-emerald-700 dark:text-emerald-200">
-                    Automatically convert recycled waste into tradable carbon tokens with real environmental impact.
-                  </p>
-                </div>
-              </div>
+            {/* Right Content - Feature Cards */}
+            <div className="space-y-6 lg:space-y-8 xl:space-y-10">
+              {[
+                {
+                  icon: Shield,
+                  title: 'AI-Powered Verification',
+                  description: 'Advanced AI validates waste quality with 95%+ accuracy using computer vision.',
+                  gradient: 'from-blue-500 to-cyan-500'
+                },
+                {
+                  icon: TrendingUp,
+                  title: 'DeFi Yield Farming',
+                  description: 'Stake tokens in ESG vaults and earn up to 25% APY from corporate partners.',
+                  gradient: 'from-emerald-500 to-green-500'
+                },
+                {
+                  icon: Zap,
+                  title: 'Instant Tokenization',
+                  description: 'Convert waste to tokens in seconds on Hedera\'s high-speed blockchain.',
+                  gradient: 'from-yellow-500 to-orange-500'
+                }
+              ].map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div
+                    key={index}
+                    className="group bg-white/10 dark:bg-white/5 backdrop-blur-lg rounded-2xl lg:rounded-3xl p-4 lg:p-6 border border-white/20 hover:border-white/30 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className={`flex-shrink-0 w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-r ${feature.gradient} rounded-xl lg:rounded-2xl flex items-center justify-center shadow-lg`}>
+                        <Icon className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg lg:text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors duration-200">
+                          {feature.title}
+                        </h3>
+                        <p className="text-sm lg:text-base text-white/80 leading-relaxed">
+                          {feature.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute top-20 right-10 w-20 h-20 bg-emerald-200/30 dark:bg-emerald-600/20 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 left-10 w-32 h-32 bg-green-200/30 dark:bg-green-600/20 rounded-full blur-xl"></div>
-      <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-emerald-300/30 dark:bg-emerald-500/20 rounded-full blur-xl"></div>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-400 rounded-full animate-pulse opacity-60"></div>
+        <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-green-300 rounded-full animate-ping opacity-40"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-emerald-300 rounded-full animate-pulse opacity-50"></div>
+        <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping opacity-30"></div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
     </section>
   );
 }

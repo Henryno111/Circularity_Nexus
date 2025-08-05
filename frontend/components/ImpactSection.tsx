@@ -68,7 +68,7 @@ const features = [
 export default function ImpactSection() {
   return (
     <section id="impact" className="py-24 bg-gradient-to-br from-white via-emerald-50 to-green-50 dark:from-emerald-900 dark:via-emerald-800 dark:to-emerald-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full mx-auto max-w-none 2xl:max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-emerald-100 dark:bg-emerald-800/50 rounded-full text-emerald-800 dark:text-emerald-200 text-sm font-semibold mb-4">
@@ -88,7 +88,7 @@ export default function ImpactSection() {
         </div>
 
         {/* Impact Stats */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 mb-20">
           {impactStats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -124,7 +124,7 @@ export default function ImpactSection() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 mb-16">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (

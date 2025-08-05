@@ -54,10 +54,10 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="py-24 bg-white dark:bg-emerald-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="features" className="py-20 lg:py-28 xl:py-32 bg-white dark:bg-emerald-900">
+      <div className="w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20 lg:mb-24 xl:mb-28">
           <div className="inline-flex items-center px-4 py-2 bg-emerald-100 dark:bg-emerald-800/50 rounded-full text-emerald-800 dark:text-emerald-200 text-sm font-semibold mb-4">
             <Zap className="w-4 h-4 mr-2" />
             Groundbreaking Features
@@ -75,31 +75,31 @@ export default function FeaturesSection() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 xl:gap-12 2xl:gap-16">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-white to-emerald-50 dark:from-emerald-800 dark:to-emerald-900 rounded-3xl p-8 border border-emerald-100 dark:border-emerald-700 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 hover:-translate-y-1"
+                className="group bg-gradient-to-br from-white to-emerald-50 dark:from-emerald-800 dark:to-emerald-900 rounded-3xl p-8 lg:p-10 xl:p-12 border border-emerald-100 dark:border-emerald-700 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 hover:-translate-y-2"
               >
                 {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`inline-flex items-center justify-center w-16 h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 bg-gradient-to-r ${feature.color} rounded-2xl mb-8 lg:mb-10 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className="w-8 h-8 text-white" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-emerald-900 dark:text-white mb-4">
+                <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-emerald-900 dark:text-white mb-6 lg:mb-8">
                   {feature.title}
                 </h3>
                 
-                <p className="text-emerald-700 dark:text-emerald-200 leading-relaxed">
+                <p className="text-lg lg:text-xl text-emerald-700 dark:text-emerald-200 leading-relaxed">
                   {feature.description}
                 </p>
 
                 {/* Hover Arrow */}
-                <div className="flex items-center mt-6 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-sm font-semibold mr-2">Learn more</span>
+                <div className="flex items-center mt-8 lg:mt-10 text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-base lg:text-lg font-semibold mr-3">Learn more</span>
                   <div className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center">
                     <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -112,8 +112,8 @@ export default function FeaturesSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-emerald-500 to-green-500 rounded-3xl p-12 text-white relative overflow-hidden">
+        <div className="text-center mt-20 lg:mt-24 xl:mt-28">
+          <div className="bg-gradient-to-r from-emerald-500 to-green-500 rounded-3xl p-12 lg:p-16 xl:p-20 text-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>

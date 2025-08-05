@@ -14,10 +14,10 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-emerald-900 dark:bg-emerald-950 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full mx-auto max-w-none 2xl:max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid lg:grid-cols-4 gap-12">
+          <div className="grid lg:grid-cols-4 gap-8 lg:gap-12 xl:gap-16 2xl:gap-20">
             {/* Company Info */}
             <div className="lg:col-span-2 space-y-6">
               {/* Logo */}
