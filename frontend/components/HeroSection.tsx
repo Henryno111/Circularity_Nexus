@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Recycle, Coins, Leaf2 } from 'lucide-react';
+import { ArrowRight, Recycle, Coins, Leaf } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -30,7 +30,7 @@ export default function HeroSection() {
           <div className="space-y-8">
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 bg-emerald-100 dark:bg-emerald-800/50 rounded-full text-emerald-800 dark:text-emerald-200 text-sm font-semibold">
-              <Leaf2 className="w-4 h-4 mr-2" />
+              <Leaf className="w-4 h-4 mr-2" />
               Tokenize Trash. Earn Wealth. Heal the Planet.
             </div>
 
@@ -119,7 +119,7 @@ export default function HeroSection() {
             <div className="bg-white/70 dark:bg-emerald-800/40 backdrop-blur-sm rounded-3xl p-6 border border-emerald-100 dark:border-emerald-700 shadow-lg">
               <div className="flex items-start space-x-4">
                 <div className="flex items-center justify-center w-12 h-12 bg-emerald-500 rounded-2xl">
-                  <Leaf2 className="w-6 h-6 text-white" />
+                  <Leaf className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-emerald-900 dark:text-white mb-2">
