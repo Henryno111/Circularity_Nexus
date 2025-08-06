@@ -72,12 +72,12 @@ export default function HeroSection() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-6 lg:gap-8 pt-6">
-                <button className="group inline-flex items-center justify-center px-6 py-3 lg:px-8 lg:py-4 xl:px-10 xl:py-5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white text-lg lg:text-xl xl:text-2xl font-semibold rounded-2xl transition-all duration-300 shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105 transform min-w-[200px] lg:min-w-[240px]">
+                <button className="group inline-flex items-center justify-center px-6 py-3 lg:px-8 lg:py-4 xl:px-10 xl:py-5 bg-emerald-400/30 hover:bg-emerald-500/40 text-white text-lg lg:text-xl xl:text-2xl font-semibold rounded-2xl transition-all duration-300 shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105 transform min-w-[200px] lg:min-w-[240px] backdrop-blur-sm">
                   <span>Start Tokenizing</span>
                   <ArrowRight className="ml-3 lg:ml-4 w-6 h-6 lg:w-7 lg:h-7 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>
                 
-                <button className="group inline-flex items-center justify-center px-6 py-3 lg:px-8 lg:py-4 xl:px-10 xl:py-5 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white text-lg lg:text-xl xl:text-2xl font-semibold rounded-2xl border border-white/30 hover:border-white/50 transition-all duration-300 min-w-[180px] lg:min-w-[220px]">
+                <button className="group inline-flex items-center justify-center px-6 py-3 lg:px-8 lg:py-4 xl:px-10 xl:py-5 bg-emerald-400/30 hover:bg-emerald-500/40 text-white text-lg lg:text-xl xl:text-2xl font-semibold rounded-2xl border border-emerald-300/30 hover:border-emerald-400/50 transition-all duration-300 min-w-[180px] lg:min-w-[220px] backdrop-blur-sm">
                   <Play className="mr-3 lg:mr-4 w-6 h-6 lg:w-7 lg:h-7" />
                   <span>Watch Demo</span>
                 </button>
@@ -110,17 +110,17 @@ export default function HeroSection() {
                 return (
                   <div
                     key={index}
-                    className="group bg-white/10 dark:bg-white/5 backdrop-blur-lg rounded-2xl lg:rounded-3xl p-4 lg:p-6 border border-white/20 hover:border-white/30 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
+                    className="group bg-emerald-400/30 dark:bg-emerald-500/30 backdrop-blur-lg rounded-2xl lg:rounded-3xl p-4 lg:p-6 border border-emerald-300/30 dark:border-emerald-400/30 hover:border-emerald-400/50 dark:hover:border-emerald-500/50 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
                   >
                     <div className="flex items-start space-x-4">
                       <div className={`flex-shrink-0 w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-r ${feature.gradient} rounded-xl lg:rounded-2xl flex items-center justify-center shadow-lg`}>
                         <Icon className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-lg lg:text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors duration-200">
+                        <h3 className="text-lg lg:text-xl font-bold text-white mb-2 group-hover:text-emerald-100 transition-colors duration-200">
                           {feature.title}
                         </h3>
-                        <p className="text-sm lg:text-base text-white/80 leading-relaxed">
+                        <p className="text-sm lg:text-base text-white/90 leading-relaxed">
                           {feature.description}
                         </p>
                       </div>
@@ -143,8 +143,8 @@ export default function HeroSection() {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+        <div className="w-6 h-10 border-2 border-emerald-300 dark:border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-emerald-600 dark:bg-white/60 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

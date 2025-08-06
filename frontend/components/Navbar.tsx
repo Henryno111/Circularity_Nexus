@@ -34,6 +34,14 @@ export default function Navbar() {
     }
   };
 
+  const handleThemeToggle = () => {
+    try {
+      toggleTheme();
+    } catch (error) {
+      console.error('Error toggling theme:', error);
+    }
+  };
+
   return (
     <>
       <nav 
@@ -54,7 +62,7 @@ export default function Navbar() {
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white font-display">
+                <span className="text-xl lg:text-2xl font-bold text-emerald-900 dark:text-white font-display">
                   Circularity
                 </span>
                 <span className="text-xs lg:text-sm text-emerald-600 dark:text-emerald-400 font-semibold -mt-1 tracking-wider">
@@ -73,7 +81,7 @@ export default function Navbar() {
                     e.preventDefault();
                     handleLinkClick(link.href);
                   }}
-                  className="relative px-6 py-3 text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium text-base lg:text-lg xl:text-xl transition-all duration-200 group whitespace-nowrap"
+                  className="relative px-6 py-3 text-emerald-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium text-base lg:text-lg xl:text-xl transition-all duration-200 group whitespace-nowrap"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-500 to-emerald-600 group-hover:w-full transition-all duration-300"></span>
@@ -86,8 +94,8 @@ export default function Navbar() {
               {/* Theme Toggle */}
               {mounted && (
                 <button
-                  onClick={toggleTheme}
-                  className="relative p-3 lg:p-4 rounded-xl bg-gray-100 dark:bg-emerald-800/50 text-gray-600 dark:text-emerald-300 hover:bg-gray-200 dark:hover:bg-emerald-700 transition-all duration-200 group"
+                  onClick={handleThemeToggle}
+                  className="theme-toggle relative p-3 lg:p-4 rounded-xl transition-all duration-200 group"
                   aria-label="Toggle theme"
                 >
                   <div className="relative w-5 h-5 lg:w-6 lg:h-6">
@@ -98,8 +106,7 @@ export default function Navbar() {
               )}
 
               {/* CTA Button - Desktop */}
-              <button className="hidden sm:flex items-center px-16 lg:px-12
-               py-4 lg:py-5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white text-sm lg:text-base font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105">
+              <button className="hidden sm:flex items-center px-16 lg:px-20 py-4 lg:py-5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white text-sm lg:text-base font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105">
                 Get Started
               </button>
 
@@ -141,7 +148,7 @@ export default function Navbar() {
                   <Leaf className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <span className="text-lg font-bold text-gray-900 dark:text-white font-display">Circularity</span>
+                  <span className="text-lg font-bold text-emerald-900 dark:text-white font-display">Circularity</span>
                   <span className="block text-xs text-emerald-600 dark:text-emerald-400 font-semibold">NEXUS</span>
                 </div>
               </div>
@@ -164,7 +171,7 @@ export default function Navbar() {
                       e.preventDefault();
                       handleLinkClick(link.href);
                     }}
-                    className="flex items-center justify-between px-6 py-4 text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-800/50 rounded-xl font-medium transition-all duration-200 group"
+                    className="flex items-center justify-between px-6 py-4 text-emerald-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-800/50 rounded-xl font-medium transition-all duration-200 group"
                   >
                     {link.label}
                     <ChevronDown className="w-4 h-4 rotate-[-90deg] opacity-0 group-hover:opacity-100 transition-all duration-200" />

@@ -63,12 +63,12 @@ export default function FeaturesSection() {
             Groundbreaking Features
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-bold text-emerald-900 dark:text-white mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Why Circularity Nexus is
             <span className="text-emerald-500 block">Revolutionary</span>
           </h2>
           
-          <p className="text-xl text-emerald-700 dark:text-emerald-200 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 dark:text-emerald-200 max-w-3xl mx-auto">
             The world's first comprehensive waste-to-wealth tokenization platform combining 
             AI verification, DeFi rewards, and real environmental impact.
           </p>
@@ -81,7 +81,7 @@ export default function FeaturesSection() {
             return (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-white to-emerald-50 dark:from-emerald-800 dark:to-emerald-900 rounded-3xl p-8 lg:p-10 xl:p-12 border border-emerald-100 dark:border-emerald-700 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 hover:-translate-y-2"
+                className="group bg-white dark:from-emerald-800 dark:to-emerald-900 rounded-3xl p-8 lg:p-10 xl:p-12 border border-emerald-100 dark:border-emerald-700 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300 hover:-translate-y-2"
               >
                 {/* Icon */}
                 <div className={`inline-flex items-center justify-center w-16 h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 bg-gradient-to-r ${feature.color} rounded-2xl mb-8 lg:mb-10 group-hover:scale-110 transition-transform duration-300`}>
@@ -89,11 +89,11 @@ export default function FeaturesSection() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-emerald-900 dark:text-white mb-6 lg:mb-8">
+                <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-white mb-6 lg:mb-8">
                   {feature.title}
                 </h3>
                 
-                <p className="text-lg lg:text-xl text-emerald-700 dark:text-emerald-200 leading-relaxed">
+                <p className="text-lg lg:text-xl text-gray-500 dark:text-emerald-200 leading-relaxed">
                   {feature.description}
                 </p>
 
