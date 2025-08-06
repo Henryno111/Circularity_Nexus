@@ -17,38 +17,71 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const root = document.documentElement;
-    
-    // Check for saved theme preference or system preference
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const initialTheme = savedTheme || systemTheme;
-    
-    setTheme(initialTheme);
-    
-    // Apply theme immediately
-    root.classList.remove('light', 'dark');
-    root.classList.add(initialTheme);
-    
-    setMounted(true);
+    try {
+      const root = document.documentElement;
+      const body = document.body;
+      
+      // Check for saved theme preference or system preference
+      const savedTheme = localStorage.getItem('theme') as Theme;
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const initialTheme = savedTheme || systemTheme;
+      
+      console.log('Initial theme:', initialTheme);
+      setTheme(initialTheme);
+      
+      // Apply theme immediately
+      root.classList.remove('light', 'dark');
+      root.classList.add(initialTheme);
+      body.classList.remove('light', 'dark');
+      body.classList.add(initialTheme);
+      
+      console.log('Applied theme classes:', root.classList.toString());
+      setMounted(true);
+    } catch (error) {
+      console.error('Error initializing theme:', error);
+      setMounted(true);
+    }
   }, []);
 
   useEffect(() => {
     if (!mounted) return;
     
-    const root = document.documentElement;
-    root.classList.remove('light', 'dark');
-    root.classList.add(theme);
-    localStorage.setItem('theme', theme);
+    try {
+      const root = document.documentElement;
+      const body = document.body;
+      
+      console.log('Changing theme to:', theme);
+      
+      root.classList.remove('light', 'dark');
+      root.classList.add(theme);
+      body.classList.remove('light', 'dark');
+      body.classList.add(theme);
+      
+      console.log('Updated theme classes:', root.classList.toString());
+      localStorage.setItem('theme', theme);
+    } catch (error) {
+      console.error('Error updating theme:', error);
+    }
   }, [theme, mounted]);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
+    try {
+      const newTheme = theme === 'light' ? 'dark' : 'light';
+      console.log('Toggling theme from', theme, 'to', newTheme);
+      setTheme(newTheme);
+    } catch (error) {
+      console.error('Error toggling theme:', error);
+    }
+  };
+
+  const contextValue: ThemeContextType = {
+    theme,
+    toggleTheme,
+    mounted
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, mounted }}>
+    <ThemeContext.Provider value={contextValue}>
       {children}
     </ThemeContext.Provider>
   );

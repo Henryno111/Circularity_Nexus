@@ -50,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${playfairDisplay.variable} antialiased bg-white dark:bg-emerald-900 text-emerald-900 dark:text-white transition-colors duration-200`}
+        className={`${inter.variable} ${playfairDisplay.variable} antialiased transition-colors duration-200`}
       >
         <ThemeProvider>
           {children}

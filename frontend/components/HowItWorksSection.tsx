@@ -43,8 +43,8 @@ const steps = [
 
 export default function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="py-24 bg-gradient-to-br from-emerald-50 via-white to-green-50 dark:from-emerald-900 dark:via-emerald-800 dark:to-emerald-900">
-      <div className="w-full mx-auto max-w-none 2xl:max-w-[1600px] px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+    <section id="how-it-works" className="py-24 bg-white dark:from-emerald-900 dark:via-emerald-800 dark:to-emerald-900">
+      <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 xl:px-16 2xl:px-24">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-emerald-100 dark:bg-emerald-800/50 rounded-full text-emerald-800 dark:text-emerald-200 text-sm font-semibold mb-4">
@@ -52,12 +52,12 @@ export default function HowItWorksSection() {
             Simple Process
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-bold text-emerald-900 dark:text-white mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             How It Works
             <span className="text-emerald-500 block">In 4 Simple Steps</span>
           </h2>
           
-          <p className="text-xl text-emerald-700 dark:text-emerald-200 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 dark:text-emerald-200 max-w-3xl mx-auto">
             Transform your daily waste into valuable digital assets in minutes. 
             Our streamlined process makes earning from recycling effortless.
           </p>
@@ -91,10 +91,10 @@ export default function HowItWorksSection() {
 
                     {/* Title & Description */}
                     <div>
-                      <h3 className="text-3xl font-bold text-emerald-900 dark:text-white mb-4">
+                      <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                         {step.title}
                       </h3>
-                      <p className="text-xl text-emerald-700 dark:text-emerald-200 leading-relaxed">
+                      <p className="text-xl text-gray-500 dark:text-emerald-200 leading-relaxed">
                         {step.description}
                       </p>
                     </div>
@@ -104,7 +104,7 @@ export default function HowItWorksSection() {
                       {step.details.map((detail, detailIndex) => (
                         <div key={detailIndex} className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                          <span className="text-sm text-emerald-700 dark:text-emerald-300">
+                          <span className="text-sm text-gray-600 dark:text-emerald-300">
                             {detail}
                           </span>
                         </div>
@@ -121,7 +121,7 @@ export default function HowItWorksSection() {
 
                   {/* Visual Card */}
                   <div className={`${isEven ? '' : 'lg:order-1'}`}>
-                    <div className="bg-white dark:bg-emerald-800/50 rounded-3xl p-8 shadow-2xl border border-emerald-100 dark:border-emerald-700 relative overflow-hidden">
+                    <div className="bg-white dark:bg-emerald-800/50 rounded-3xl p-8 shadow-2xl border border-gray-200 dark:border-emerald-700 relative overflow-hidden">
                       {/* Background Pattern */}
                       <div className="absolute inset-0 opacity-5">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500 rounded-full translate-x-16 -translate-y-16"></div>
@@ -135,8 +135,8 @@ export default function HowItWorksSection() {
                         </div>
 
                         {/* Image Placeholder */}
-                        <div className="bg-gradient-to-br from-emerald-100 to-green-100 dark:from-emerald-700 dark:to-green-700 rounded-2xl h-48 flex items-center justify-center mb-6">
-                          <div className="text-center text-emerald-400 dark:text-emerald-500">
+                        <div className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-emerald-700 dark:to-green-700 rounded-2xl h-48 flex items-center justify-center mb-6">
+                          <div className="text-center text-gray-400 dark:text-emerald-500">
                             <div className="text-4xl mb-2">🖼️</div>
                             <div className="text-sm font-medium">Step {index + 1} Visual</div>
                             <div className="text-xs mt-1">Image Placeholder</div>
@@ -146,18 +146,18 @@ export default function HowItWorksSection() {
                         {/* Stats */}
                         <div className="grid grid-cols-2 gap-4 text-center">
                           <div>
-                            <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
+                            <div className="text-2xl font-bold text-gray-900 dark:text-emerald-400">
                               {index === 0 ? '< 3s' : index === 1 ? '95%' : index === 2 ? '10k' : '25%'}
                             </div>
-                            <div className="text-xs text-emerald-700 dark:text-emerald-300">
+                            <div className="text-xs text-gray-500 dark:text-emerald-300">
                               {index === 0 ? 'Processing' : index === 1 ? 'Accuracy' : index === 2 ? 'TPS' : 'Max APY'}
                             </div>
                           </div>
                           <div>
-                            <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
+                            <div className="text-2xl font-bold text-gray-900 dark:text-emerald-400">
                               {index === 0 ? '50+' : index === 1 ? '24/7' : index === 2 ? '$0.0001' : '1M+'}
                             </div>
-                            <div className="text-xs text-emerald-700 dark:text-emerald-300">
+                            <div className="text-xs text-gray-500 dark:text-emerald-300">
                               {index === 0 ? 'Materials' : index === 1 ? 'Available' : index === 2 ? 'Cost' : 'Tokens'}
                             </div>
                           </div>
@@ -173,11 +173,11 @@ export default function HowItWorksSection() {
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <div className="bg-white dark:bg-emerald-800 rounded-3xl p-12 shadow-2xl border border-emerald-100 dark:border-emerald-700">
-            <h3 className="text-3xl font-bold text-emerald-900 dark:text-white mb-6">
+          <div className="bg-white dark:bg-emerald-800 rounded-3xl p-12 shadow-2xl border border-gray-200 dark:border-emerald-700">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Ready to Start Your Journey?
             </h3>
-            <p className="text-xl text-emerald-700 dark:text-emerald-200 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-500 dark:text-emerald-200 mb-8 max-w-2xl mx-auto">
               Join the circular economy revolution. Start earning rewards from your waste today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -185,7 +185,7 @@ export default function HowItWorksSection() {
                 <Camera className="w-5 h-5 mr-2" />
                 Download App
               </button>
-              <button className="inline-flex items-center px-8 py-4 bg-emerald-100 dark:bg-emerald-700 text-emerald-700 dark:text-emerald-200 rounded-2xl font-semibold text-lg hover:bg-emerald-200 dark:hover:bg-emerald-600 transition-all duration-200">
+              <button className="inline-flex items-center px-8 py-4 bg-gray-100 dark:bg-emerald-700 text-gray-700 dark:text-emerald-200 rounded-2xl font-semibold text-lg hover:bg-gray-200 dark:hover:bg-emerald-600 transition-all duration-200">
                 Watch Demo
               </button>
             </div>
