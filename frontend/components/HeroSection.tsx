@@ -102,7 +102,7 @@ export default function HeroSection() {
                 {
                   icon: Zap,
                   title: 'Instant Tokenization',
-                  description: 'Convert waste to tokens in seconds on Hedera\'s high-speed blockchain.',
+                  description: 'Convert waste to tokens in seconds on Hedera&apos;s high-speed blockchain.',
                   gradient: 'from-yellow-500 to-orange-500'
                 }
               ].map((feature, index) => {

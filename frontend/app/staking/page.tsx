@@ -63,7 +63,7 @@ export default function Staking() {
         {
           id: '1',
           name: 'Unilever ESG Vault',
-          description: 'Stake PET tokens and earn rewards from Unilever\'s sustainability initiatives',
+          description: 'Stake PET tokens and earn rewards from Unilever&apos;s sustainability initiatives',
           tokenType: 'PET',
           apy: 12.5,
           totalStaked: 150000,
@@ -78,7 +78,7 @@ export default function Staking() {
         {
           id: '2',
           name: 'Coca-Cola Circular Fund',
-          description: 'Aluminum recycling vault with premium yields from Coca-Cola\'s circular economy program',
+          description: 'Aluminum recycling vault with premium yields from Coca-Cola&apos;s circular economy program',
           tokenType: 'ALUMINUM',
           apy: 18.2,
           totalStaked: 89000,
@@ -93,7 +93,7 @@ export default function Staking() {
         {
           id: '3',
           name: 'Tesla Green Metals Pool',
-          description: 'High-yield vault for electronic waste tokens with Tesla\'s green manufacturing program',
+          description: 'High-yield vault for electronic waste tokens with Tesla&apos;s green manufacturing program',
           tokenType: 'EWASTE',
           apy: 25.8,
           totalStaked: 75000,
