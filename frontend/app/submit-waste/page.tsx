@@ -6,11 +6,9 @@ import {
   Camera, 
   Trash2, 
   CheckCircle, 
-  AlertCircle,
   Loader2,
   Leaf,
   Coins,
-  ArrowRight,
   X
 } from 'lucide-react';
 

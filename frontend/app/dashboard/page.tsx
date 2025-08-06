@@ -8,9 +8,7 @@ import {
   Recycle, 
   Coins, 
   Activity,
-  Plus,
-  Eye,
-  ArrowRight
+  Plus
 } from 'lucide-react';
 
 interface TokenBalance {

@@ -5,16 +5,10 @@ import {
   Lock, 
   Unlock, 
   TrendingUp, 
-  Coins, 
-  Calendar,
-  DollarSign,
-  Leaf,
   Building2,
-  Users,
   ArrowRight,
   Loader2,
-  CheckCircle,
-  AlertCircle
+  CheckCircle
 } from 'lucide-react';
 
 interface Vault {
