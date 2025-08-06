@@ -40,7 +40,7 @@ groq>=0.4.1
 
 # Blockchain Dependencies
 web3>=6.0.0
-hedera-sdk-python>=2.0.0
+hedera-sdk-py>=2.0.0
 eth-account>=0.10.0
 
 # Development Dependencies

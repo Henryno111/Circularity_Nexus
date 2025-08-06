@@ -69,7 +69,7 @@ export default function FeaturesSection() {
           </h2>
           
           <p className="text-xl text-gray-500 dark:text-emerald-200 max-w-3xl mx-auto">
-            The world's first comprehensive waste-to-wealth tokenization platform combining 
+            The world&apos;s first comprehensive waste-to-wealth tokenization platform combining 
             AI verification, DeFi rewards, and real environmental impact.
           </p>
         </div>
